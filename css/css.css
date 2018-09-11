@@ -1,0 +1,17 @@
+body {
+  /* background-color: rgba(0, 0, 0, 1); */
+  /* background-image: url("img/bg.jpg"); */
+  background-image: url(../img/bg.jpg);
+  margin: 0em;
+}
+
+.holder {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3em;
+  /* text-align: center; */
+  height: 40em;
+  /* height: 100%; */
+  /* height: 50%; */
+}
