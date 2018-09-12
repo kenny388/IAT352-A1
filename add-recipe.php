@@ -71,7 +71,21 @@
     <?php
     $ingredientsAmount = 10;
     for ($i = 0; $i < $ingredientsAmount; $i++) {
-      echo "";
+      echo '<input type="number" name="ingredient-quantity[' . $i . ']" min="1" max="100" step="1" placeholder="Quantity">
+      <select name="ingredeint-unit[' . $i . ']">
+              <option value="Unit Not Selected" selected>SelectUnit</option>
+              <option value="pound(s)[' . $i . ']">pound(s)</option>
+              <option value="gram(s)[' . $i . ']" >gram(s)</option>
+              <option value="ounce(s)[' . $i . ']">ounce(s)</option>
+              <option value="pcs[' . $i . ']">pcs</option>
+              <option value="ml[' . $i . ']">ml</option>
+              <option value="tbl[' . $i . ']">tbl</option>
+              <option value="spoon[' . $i . ']">spoon</option>
+              <option value="teaspoon[' . $i . ']">teaspoon</option>
+              <option value="cup[' . $i . ']">cup</option>
+          </select>
+      <input type="text" name="ingredient-name[' . $i . ']" placeholder="Ingredient..."/><br>
+      ';
     }
     ?>
 </div>
