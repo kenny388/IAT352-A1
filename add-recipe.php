@@ -27,19 +27,19 @@
 
       <div class="form">
 
-        <form action="test_get.php" method="post">
+        <form action="processingEntry.php" method="post">
 
           <div class="container">
             <div class="firstBox" id="selectEnhancer">
-            <label>Recipe Title: </label> <input type="text" name="recipe-title" /> <br><br>
-            <label>Related Link: </label> <input type="text" name="link" /><br><br>
+            <label>Recipe Title: </label> <input type="text" name="recipeTitle" /> <br><br>
+            <label>Related Link: </label> <input type="text" name="relatedLink" /><br><br>
             <label>Category*:</label>
               <select name="category">
-                <option value="Appetizer" selected>Appetizer</option>
-                <option value="Entree" >Entree</option>
-                <option value="Dessert">Dessert</option>
-                <option value="Salad">Salad</option>
-                <option value="Others">Others</option>
+                <option value="appetizer" selected>Appetizer</option>
+                <option value="entree" >Entree</option>
+                <option value="dessert">Dessert</option>
+                <option value="salad">Salad</option>
+                <option value="others">Others</option>
               </select>
             </div>
 
@@ -51,15 +51,15 @@
 
           <div class="container">
             <div class="firstBox">
-              <label>Prep Time*:</label> <input type="text" name="prep-time-value" />
-                  <select name="prep-time-unit">
+              <label>Prep Time*:</label> <input type="text" name="prepTimeValue" />
+                  <select name="prepTimeUnit">
                     <option value="minutes" selected>Minutes</option>
                     <option value="hours" >Hours</option>
                   </select>
             </div>
             <div class="secondBox">
-              <label>Cook Time*:</label> <input type="text" name="cook-time-value" />
-                  <select name="cook-time-unit">
+              <label>Cook Time*:</label> <input type="text" name="cookTimeValue" />
+                  <select name="cookTimeUnit">
                     <option value="minutes" selected>Minutes</option>
                     <option value="hours" >Hours</option>
                   </select>
@@ -70,11 +70,11 @@
             <div class="firstBox">
               <label>Servings:</label>
                 <input type="radio" name="servings" value="1"/>1
-                <input type="radio" name="servings" value="1"/>2
-                <input type="radio" name="servings" value="1"/>3
-                <input type="radio" name="servings" value="1"/>4
-                <input type="radio" name="servings" value="1"/>5
-                <input type="radio" name="servings" value="1"/>6+
+                <input type="radio" name="servings" value="2"/>2
+                <input type="radio" name="servings" value="3"/>3
+                <input type="radio" name="servings" value="4"/>4
+                <input type="radio" name="servings" value="5"/>5
+                <input type="radio" name="servings" value="6+"/>6+
             </div>
             <div class="secondBox" id="selectEnhancer">
               <label>Difficulty:</label>
