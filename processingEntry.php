@@ -113,6 +113,12 @@
           echo '<input type="hidden" name="prepTimeValueOK" value = "false">';
         }
 
+        if (!empty($_POST["prepTimeUnit"])) {
+                $prepTimeUnit = $_POST["prepTimeUnit"];
+                echo "<input type=\"hidden\" name=\"prepTimeUnit\" value=\"$prepTimeUnit\">";
+                $prepTimeUnitOK = true;
+            }
+
         if (!empty($_POST["cookTimeValue"])) {
           $cookTimeValue = $_POST["cookTimeValue"];
           if (is_numeric($cookTimeValue)) {
@@ -130,6 +136,12 @@
           echo "<input type=\"hidden\" name=\"cookTimeValue\" value=\"Please Fill In Missing Value\">";
           echo '<input type="hidden" name="cookTimeValueOK" value = "false">';
         }
+
+        if (!empty($_POST["cookTimeUnit"])) {
+                $cookTimeUnit = $_POST["cookTimeUnit"];
+                echo "<input type=\"hidden\" name=\"cookTimeUnit\" value=\"$cookTimeUnit\">";
+                $cookTimeUnitOK = true;
+            }
 // echo '<input type="hidden" name="submit" value = "submit">';
 
       }

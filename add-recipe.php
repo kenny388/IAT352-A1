@@ -53,15 +53,15 @@
             <div class="firstBox">
               <label>Prep Time*:</label> <input type="text" name="prepTimeValue" value = "<?php if(isset($_POST['prepTimeValue'])) { $temp = $_POST["prepTimeValue"]; echo $temp;}?>" <?php if(isset($_POST['prepTimeValueOK'])) { print("style=\"background-color:Yellow;\"");}?>/>
                   <select name="prepTimeUnit">
-                    <option value="minutes" selected>Minutes</option>
-                    <option value="hours" >Hours</option>
+                    <option value="minutes" <?php if(!isset($_POST['prepTimeUnit'])) { echo "selected"; } else if ($_POST['prepTimeUnit'] == "minutes") { echo "selected";}?>>Minutes</option>
+                    <option value="hours" <?php if ($_POST['prepTimeUnit'] == "hours") { echo "selected";}?>>Hours</option>
                   </select>
             </div>
             <div class="secondBox">
               <label>Cook Time*:</label> <input type="text" name="cookTimeValue" value = "<?php if(isset($_POST['cookTimeValue'])) { $temp = $_POST["cookTimeValue"]; echo $temp;}?>" <?php if(isset($_POST['cookTimeValueOK'])) { print("style=\"background-color:Yellow;\"");}?>/>
                   <select name="cookTimeUnit">
-                    <option value="minutes" selected>Minutes</option>
-                    <option value="hours" >Hours</option>
+                    <option value="minutes" <?php if(!isset($_POST['cookTimeUnit'])) { echo "selected"; } else if ($_POST['cookTimeUnit'] == "minutes") { echo "selected";}?>>Minutes</option>
+                    <option value="hours" <?php if ($_POST['cookTimeUnit'] == "hours") { echo "selected";}?>>Hours</option>
                   </select>
             </div>
           </div>
