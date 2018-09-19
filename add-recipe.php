@@ -31,8 +31,8 @@
 
           <div class="container">
             <div class="firstBox" id="selectEnhancer">
-            <label>Recipe Title: </label> <input type="text" name="recipeTitle" /> <br><br>
-            <label>Related Link: </label> <input type="text" name="relatedLink" /><br><br>
+            <label>Recipe Title: </label> <input type="text" name="recipeTitle" value = "<?php if(isset($_POST['recipeTitle'])) { $temp = $_POST["recipeTitle"]; echo $temp;}?>" <?php if(isset($_POST['recipeTitleOK'])) { print("style=\"background-color:Yellow;\"");}  ?>/> <br><br>
+            <label>Related Link: </label> <input type="text" name="relatedLink" value = "<?php if(isset($_POST['relatedLink'])) { $temp = $_POST["relatedLink"]; echo $temp;}?>" <?php if(isset($_POST['relatedLinkOK'])) { print("style=\"background-color:Yellow;\"");}  ?>/> <br><br>
             <label>Category*:</label>
               <select name="category">
                 <option value="appetizer" selected>Appetizer</option>
