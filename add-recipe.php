@@ -79,9 +79,9 @@
             <div class="secondBox" id="selectEnhancer">
               <label>Difficulty:</label>
               <select name="difficulty">
-                <option value="easy">Easy</option>
-                <option value="intermediate" selected>Intermediate</option>
-                <option value="difficult">Difficult</option>
+                <option value="easy" <?php if (isset($_POST['difficulty']) && $_POST['difficulty'] == "easy") { echo "selected";}?>>Easy</option>
+                <option value="intermediate" <?php if(!isset($_POST['difficulty'])) { echo "selected"; } else if (isset($_POST['difficulty']) && $_POST['difficulty'] == "intermediate") { echo "selected";}?>>Intermediate</option>
+                <option value="difficult" <?php if (isset($_POST['difficulty']) && $_POST['difficulty'] == "difficult") { echo "selected";}?>>Difficult</option>
               </select>
             </div>
           </div>

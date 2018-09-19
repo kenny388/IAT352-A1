@@ -148,6 +148,12 @@
                 echo "<input type=\"hidden\" name=\"servings\" value=\"$servings\">";
                 $servingsOK = true;
             }
+
+        if (!empty($_POST["difficulty"])) {
+                $difficulty = $_POST["difficulty"];
+                echo "<input type=\"hidden\" name=\"difficulty\" value=\"$difficulty\">";
+                $difficultyOK = true;
+            }
 // echo '<input type="hidden" name="submit" value = "submit">';
 
       }
