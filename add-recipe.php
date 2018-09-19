@@ -35,11 +35,11 @@
             <label>Related Link: </label> <input type="text" name="relatedLink" value = "<?php if(isset($_POST['relatedLink'])) { $temp = $_POST["relatedLink"]; echo $temp;}?>" <?php if(isset($_POST['relatedLinkOK'])) { print("style=\"background-color:Yellow;\"");}  ?>/> <br><br>
             <label>Category*:</label>
               <select name="category">
-                <option value="appetizer" selected>Appetizer</option>
-                <option value="entree" >Entree</option>
-                <option value="dessert">Dessert</option>
-                <option value="salad">Salad</option>
-                <option value="others">Others</option>
+                <option value="appetizer" <?php if(!isset($_POST['category'])) { echo "selected"; } else if ($_POST['category'] == "appetizer") { echo "selected";}?>>Appetizer</option>
+                <option value="entree" <?php if ($_POST['category'] == "entree") { echo "selected";}?>>Entree</option>
+                <option value="dessert" <?php if ($_POST['category'] == "dessert") { echo "selected";}?>>Dessert</option>
+                <option value="salad" <?php if ($_POST['category'] == "salad") { echo "selected";}?>>Salad</option>
+                <option value="others" <?php if ($_POST['category'] == "others") { echo "selected";}?>>Others</option>
               </select>
             </div>
 

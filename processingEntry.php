@@ -83,10 +83,6 @@
                 $category = $_POST["category"];
                 echo "<input type=\"hidden\" name=\"category\" value=\"$category\">";
                 $categoryOK = true;
-            } else {
-                $category = "Category Needs to be chosen";
-                $categoryOK = false;
-                echo '<input type="hidden" name="categoryOK" value = "false">';
             }
 // echo '<input type="hidden" name="submit" value = "submit">';
 
