@@ -31,8 +31,8 @@
 
           <div class="container">
             <div class="firstBox" id="selectEnhancer">
-            <label>Recipe Title: </label> <input type="text" name="recipeTitle" value = "<?php if(isset($_POST['recipeTitle'])) { $temp = $_POST["recipeTitle"]; echo $temp;}?>" <?php if(isset($_POST['recipeTitleOK'])) { print("style=\"background-color:Yellow;\"");}  ?>/> <br><br>
-            <label>Related Link: </label> <input type="text" name="relatedLink" value = "<?php if(isset($_POST['relatedLink'])) { $temp = $_POST["relatedLink"]; echo $temp;}?>" <?php if(isset($_POST['relatedLinkOK'])) { print("style=\"background-color:Yellow;\"");}  ?>/> <br><br>
+            <label>Recipe Title: </label> <input type="text" name="recipeTitle" value = "<?php if(isset($_POST['recipeTitle'])) { $temp = $_POST["recipeTitle"]; echo $temp;}?>" <?php if(isset($_POST['recipeTitleOK'])) { print("style=\"background-color:Yellow;\"");}?>/> <br><br>
+            <label>Related Link: </label> <input type="text" name="relatedLink" value = "<?php if(isset($_POST['relatedLink'])) { $temp = $_POST["relatedLink"]; echo $temp;}?>" <?php if(isset($_POST['relatedLinkOK'])) { print("style=\"background-color:Yellow;\"");}?>/> <br><br>
             <label>Category*:</label>
               <select name="category">
                 <option value="appetizer" <?php if(!isset($_POST['category'])) { echo "selected"; } else if ($_POST['category'] == "appetizer") { echo "selected";}?>>Appetizer</option>
@@ -45,20 +45,20 @@
 
             <div class="secondBox">
               <label>Short Description: </label><br>
-              <textarea name="description" rows="10" cols="45"></textarea>
+              <textarea name="description" rows="10" cols="45" <?php if(isset($_POST['descriptionOK'])) { print("style=\"background-color:Yellow;\"");}  ?>><?php if(isset($_POST["description"])) { $temp = $_POST["description"]; echo $temp;}?></textarea>
             </div>
           </div>
 
           <div class="container">
             <div class="firstBox">
-              <label>Prep Time*:</label> <input type="text" name="prepTimeValue" />
+              <label>Prep Time*:</label> <input type="text" name="prepTimeValue" value = "<?php if(isset($_POST['prepTimeValue'])) { $temp = $_POST["prepTimeValue"]; echo $temp;}?>" <?php if(isset($_POST['prepTimeValueOK'])) { print("style=\"background-color:Yellow;\"");}?>/>
                   <select name="prepTimeUnit">
                     <option value="minutes" selected>Minutes</option>
                     <option value="hours" >Hours</option>
                   </select>
             </div>
             <div class="secondBox">
-              <label>Cook Time*:</label> <input type="text" name="cookTimeValue" />
+              <label>Cook Time*:</label> <input type="text" name="cookTimeValue" value = "<?php if(isset($_POST['cookTimeValue'])) { $temp = $_POST["cookTimeValue"]; echo $temp;}?>" <?php if(isset($_POST['cookTimeValueOK'])) { print("style=\"background-color:Yellow;\"");}?>/>
                   <select name="cookTimeUnit">
                     <option value="minutes" selected>Minutes</option>
                     <option value="hours" >Hours</option>

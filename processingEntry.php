@@ -41,19 +41,19 @@
       $relatedLinkOK = false;
       $categoryOK = false;
 
-      $description = false;
+      $descriptionOK = false;
 
-      $prepTimeValue = false;
-      $prepTimeUnit = false;
+      $prepTimeValueOK = false;
+      $prepTimeUnitOK = false;
 
-      $cookTimeValue = false;
-      $cookTimeUnit = false;
+      $cookTimeValueOK = false;
+      $cookTimeUnitOK = false;
 
-      $servings = false;
+      $servingsOK = false;
 
-      $difficulty = false;
+      $difficultyOK = false;
 
-      $allComplete = false;
+      $allCompleteOK = false;
 
       if (isset($_POST["submit"])) {
         // Form has been submitted successfully
@@ -84,6 +84,52 @@
                 echo "<input type=\"hidden\" name=\"category\" value=\"$category\">";
                 $categoryOK = true;
             }
+
+        if (!empty($_POST["description"])) {
+                $description = $_POST["description"];
+                echo "<input type=\"hidden\" name=\"description\" value=\"$description\">";
+                $descriptionOK = true;
+            } else {
+                $description = "Please Fill In The Descriptions";
+                $descriptionOK = false;
+                echo '<input type="hidden" name="descriptionOK" value = "false">';
+            }
+
+        if (!empty($_POST["prepTimeValue"])) {
+          $prepTimeValue = $_POST["prepTimeValue"];
+          if (is_numeric($prepTimeValue)) {
+            echo "<input type=\"hidden\" name=\"prepTimeValue\" value=\"$prepTimeValue\">";
+            $prepTimeValueOK = true;
+          } else {
+            $prepTimeValue = "Please Fill In The Preparation Time";
+            $prepTimeValueOK = false;
+            echo "<input type=\"hidden\" name=\"prepTimeValue\" value=\"Numeric Value Required\">";
+            echo '<input type="hidden" name="prepTimeValueOK" value = "false">';
+          }
+        } else {
+          $prepTimeValue = "Please Fill In The Preparation Time";
+          $prepTimeValueOK = false;
+          echo "<input type=\"hidden\" name=\"prepTimeValue\" value=\"Please Fill In Missing Value\">";
+          echo '<input type="hidden" name="prepTimeValueOK" value = "false">';
+        }
+
+        if (!empty($_POST["cookTimeValue"])) {
+          $cookTimeValue = $_POST["cookTimeValue"];
+          if (is_numeric($cookTimeValue)) {
+            echo "<input type=\"hidden\" name=\"cookTimeValue\" value=\"$cookTimeValue\">";
+            $cookTimeValueOK = true;
+          } else {
+            $cookTimeValue = "Please Fill In The Cook Time";
+            $cookTimeValueOK = false;
+            echo "<input type=\"hidden\" name=\"cookTimeValue\" value=\"Numeric Value Required\">";
+            echo '<input type="hidden" name="cookTimeValueOK" value = "false">';
+          }
+        } else {
+          $cookTimeValue = "Please Fill In The Cook Time";
+          $cookTimeValueOK = false;
+          echo "<input type=\"hidden\" name=\"cookTimeValue\" value=\"Please Fill In Missing Value\">";
+          echo '<input type="hidden" name="cookTimeValueOK" value = "false">';
+        }
 // echo '<input type="hidden" name="submit" value = "submit">';
 
       }
