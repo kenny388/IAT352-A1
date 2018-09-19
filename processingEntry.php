@@ -142,6 +142,12 @@
                 echo "<input type=\"hidden\" name=\"cookTimeUnit\" value=\"$cookTimeUnit\">";
                 $cookTimeUnitOK = true;
             }
+
+        if (!empty($_POST["servings"])) {
+                $servings = $_POST["servings"];
+                echo "<input type=\"hidden\" name=\"servings\" value=\"$servings\">";
+                $servingsOK = true;
+            }
 // echo '<input type="hidden" name="submit" value = "submit">';
 
       }
