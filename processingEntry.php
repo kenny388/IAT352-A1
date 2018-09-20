@@ -253,21 +253,21 @@ if ($recipeTitleOK && $relatedLinkOK && $categoryOK && $descriptionOK && $prepTi
 //If all complete, input into txt File and redirects to all-recipe page
 if ($allCompleteOK) {
   //first save the information to the file and then
-  $temp = $recipeTitle . ", " . $relatedLink . ", " . $category . ", " . $description . ", " . $prepTimeValue . ", " . $prepTimeUnit . ", " . $cookTimeValue . ", " . $cookTimeUnit
-   . ", " . $servings . ", " . $difficulty . ", " .
-   $ingredientQuantity0 . ", " .  $ingredientUnit0 . ", " . $ingredientName0 . ", " .
-   $ingredientQuantity1 . ", " .  $ingredientUnit1 . ", " . $ingredientName1 . ", " .
-   $ingredientQuantity2 . ", " .  $ingredientUnit2 . ", " . $ingredientName2 . ", " .
-   $ingredientQuantity3 . ", " .  $ingredientUnit3 . ", " . $ingredientName3 . ", " .
-   $ingredientQuantity4 . ", " .  $ingredientUnit4 . ", " . $ingredientName4 . ", " .
-   $ingredientQuantity5 . ", " .  $ingredientUnit5 . ", " . $ingredientName5 . ", " .
-   $ingredientQuantity6 . ", " .  $ingredientUnit6 . ", " . $ingredientName6 . ", " .
-   $ingredientQuantity7 . ", " .  $ingredientUnit7 . ", " . $ingredientName7 . ", " .
-   $ingredientQuantity8 . ", " .  $ingredientUnit8 . ", " . $ingredientName8 . ", " .
-   $ingredientQuantity9 . ", " .  $ingredientUnit9 . ", " . $ingredientName9 . ", " .
+  @$temp = $recipeTitle . ",_" . $relatedLink . ",_" . $category . ",_" . $description . ",_" . $prepTimeValue . ",_" . $prepTimeUnit . ",_" . $cookTimeValue . ",_" . $cookTimeUnit
+   . ",_" . $servings . ",_" . $difficulty . ",_" .
+   $ingredientQuantity0 . ",_" .  $ingredientUnit0 . ",_" . $ingredientName0 . ",_" .
+   $ingredientQuantity1 . ",_" .  $ingredientUnit1 . ",_" . $ingredientName1 . ",_" .
+   $ingredientQuantity2 . ",_" .  $ingredientUnit2 . ",_" . $ingredientName2 . ",_" .
+   $ingredientQuantity3 . ",_" .  $ingredientUnit3 . ",_" . $ingredientName3 . ",_" .
+   $ingredientQuantity4 . ",_" .  $ingredientUnit4 . ",_" . $ingredientName4 . ",_" .
+   $ingredientQuantity5 . ",_" .  $ingredientUnit5 . ",_" . $ingredientName5 . ",_" .
+   $ingredientQuantity6 . ",_" .  $ingredientUnit6 . ",_" . $ingredientName6 . ",_" .
+   $ingredientQuantity7 . ",_" .  $ingredientUnit7 . ",_" . $ingredientName7 . ",_" .
+   $ingredientQuantity8 . ",_" .  $ingredientUnit8 . ",_" . $ingredientName8 . ",_" .
+   $ingredientQuantity9 . ",_" .  $ingredientUnit9 . ",_" . $ingredientName9 . ",_" .
    $tags.
     "\n";
-  $file = 'kenny_cheung_recipes.txt';
+  $file = 'recipes/kenny_cheung_recipes.txt';
 file_put_contents($file, $temp, FILE_APPEND);
 
   //redirect to the page you want to display

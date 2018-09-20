@@ -21,51 +21,45 @@
 
       <hr>
 
-      <?php
-      $file_lines = file('kenny_cheung_recipes.txt');
-      foreach ($file_lines as $line) {
-          $datas = explode(", ", $line);
-
-          
-
-
-
-
-      }
-      ?>
-
-
       <div class="container">
-        <div class="recipe">
-          <div class="leftBox">
-            <div class="titleBox">
-              <h3>NO NAME PIEEEEEE</h3>
-            </div>
-            <div class="descriptionBox">
-              <p>
+        <?php
+        $file_lines = file('recipes/kenny_cheung_recipes.txt');
+        $keyNum = -1;
+          foreach ($file_lines as $line) {
+            $keyNum++;
+            $datas = explode(",_", $line);
+            echo '<div class="recipe">';
+              echo '<div class="leftBox">';
+                echo '<div class="titleBox">';
+                  echo '<h3>' . $datas[0] . '</h3>';
+                echo '</div>';
+                echo '<div class="descriptionBox">';
+                  echo '<p>' . $datas[3] . '</p>';
+                echo '</div>';
+              echo '</div>';
+              echo '<div class="rightBox">';
+                echo '<div class="prepCookBox">';
+                  echo '<div class="innerLeftBox">';
+                    echo '<label>Prep: '. $datas[4] . $datas[5] .'</label>';
+                  echo '</div>';
+                  echo '<div class="innerRightBox">';
+                  echo '<label>Cook: '. $datas[6] . $datas[7] .'</label>';
+                echo '</div>';
+                echo '</div>';
+                echo '<div class="servingsLevelBox">';
+                  echo '<div class="innerLeftBox">';
+                    echo '<label>Servings: '. $datas[8] .'</label>';
+                  echo '</div>';
+                  echo '<div class="innerRightBox">';
+                  echo '<label>Level: '. $datas[9] .'</label>';
+                echo '</div>';
+                echo '</div>';
+              echo '</div>';
+            echo '</div>';
+        }
+        ?>
 
-              </p>
-            </div>
-          </div>
-          <div class="rightBox">
-            <div class="prepCookBox">
-              <div class="innerLeftBox">
-                <label>Prep: 15mins</label>
-              </div>
-              <div class="innerRightBox">
-              <label>Cook: 15mins</label>
-            </div>
-            </div>
-            <div class="servingsLevelBox">
-              <div class="innerLeftBox">
-                <label>Servings: 6+</label>
-              </div>
-              <div class="innerRightBox">
-              <label>Level: Intermediate</label>
-            </div>
-            </div>
-          </div>
-        </div>
+        <!-- //original Recipe Template:
         <div class="recipe">
           <div class="leftBox">
             <div class="titleBox">
@@ -93,35 +87,8 @@
             </div>
             </div>
           </div>
-        </div>
-        <div class="recipe">
-          <div class="leftBox">
-            <div class="titleBox">
-              <h3>NO NAME PIEEEEEE</h3>
-            </div>
-            <div class="descriptionBox">
-              <p>This is just sample text, Here is a pie, it has chicken, grass and everything except vegetables in it.</p>
-            </div>
-          </div>
-          <div class="rightBox">
-            <div class="prepCookBox">
-              <div class="innerLeftBox">
-                <label>Prep: 15mins</label>
-              </div>
-              <div class="innerRightBox">
-              <label>Cook: 15mins</label>
-            </div>
-            </div>
-            <div class="servingsLevelBox">
-              <div class="innerLeftBox">
-                <label>Servings: 6+</label>
-              </div>
-              <div class="innerRightBox">
-              <label>Level: Intermediate</label>
-            </div>
-            </div>
-          </div>
-        </div>
+        </div> -->
+
       </div>
 
     </div>
