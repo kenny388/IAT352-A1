@@ -47,6 +47,8 @@
       $ingredientQuantity8 = "";
       $ingredientQuantity9 = "";
 
+      $tags = "";
+
       //Booleans to see if value OK
       $recipeTitleOK = false;
       $relatedLinkOK = false;
@@ -76,6 +78,8 @@
       $ingredientQuantity7OK = false;
       $ingredientQuantity8OK = false;
       $ingredientQuantity9OK = false;
+
+      $tagsOK = "";
 
       if (isset($_POST["submit"])) {
         // Form has been submitted successfully
@@ -393,8 +397,12 @@
                 $ingredientName9OK = true;
             }
 
-
-
+        //tags
+        if (!empty($_POST["tags"])) {
+                $tags = $_POST["tags"];
+                echo "<input type=\"hidden\" name=\"tags\" value=\"$tags\">";
+                $tagsOK = true;
+            }
 
 
 // echo '<input type="hidden" name="submit" value = "submit">';

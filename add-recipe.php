@@ -774,7 +774,7 @@
 <!-- <br> -->
 
 <div class="tags">
-  <textarea rows="4" cols="50" name="tags"></textarea>
+  <textarea rows="4" cols="50" name="tags"><?php if (isset($_POST['tags'])) { echo $_POST['tags']; } ?></textarea>
   <p class="smallCaption">Please separate your tags with ", "</p>
   <p class="smallCaption">Ex. Good Morning, 5mins, breakfast, easy to make</p><br>
 
