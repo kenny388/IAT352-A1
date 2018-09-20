@@ -21,6 +21,20 @@
 
       <hr>
 
+      <?php
+      $file_lines = file('kenny_cheung_recipes.txt');
+      foreach ($file_lines as $line) {
+          $datas = explode(", ", $line);
+
+          
+
+
+
+
+      }
+      ?>
+
+
       <div class="container">
         <div class="recipe">
           <div class="leftBox">
@@ -28,7 +42,9 @@
               <h3>NO NAME PIEEEEEE</h3>
             </div>
             <div class="descriptionBox">
-              <p>This is just sample text, Here is a pie, it has chicken, grass and everything except vegetables in it.</p>
+              <p>
+
+              </p>
             </div>
           </div>
           <div class="rightBox">

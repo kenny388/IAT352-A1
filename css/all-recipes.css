@@ -101,14 +101,14 @@ h3 {
   margin-left: 2%;
   margin-top: 2%;
   margin-bottom: 1%;
-  height: 27%;
+  /* height: 27%; */
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .descriptionBox {
   width: 98%;
   margin-left: 2%;
-  height: 67%;
+  /* height: 67%; */
   margin-top: 1%;
   margin-bottom: 2%;
   background-color: rgba(255, 255, 255, 0.5);
