@@ -52,10 +52,58 @@
         </div>
         <div class="recipe">
           <div class="leftBox">
-
+            <div class="titleBox">
+              <h3>NO NAME PIEEEEEE</h3>
+            </div>
+            <div class="descriptionBox">
+              <p>This is just sample text, Here is a pie, it has chicken, grass and everything except vegetables in it.</p>
+            </div>
           </div>
           <div class="rightBox">
-
+            <div class="prepCookBox">
+              <div class="innerLeftBox">
+                <label>Prep: 15mins</label>
+              </div>
+              <div class="innerRightBox">
+              <label>Cook: 15mins</label>
+            </div>
+            </div>
+            <div class="servingsLevelBox">
+              <div class="innerLeftBox">
+                <label>Servings: 6+</label>
+              </div>
+              <div class="innerRightBox">
+              <label>Level: Intermediate</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="recipe">
+          <div class="leftBox">
+            <div class="titleBox">
+              <h3>NO NAME PIEEEEEE</h3>
+            </div>
+            <div class="descriptionBox">
+              <p>This is just sample text, Here is a pie, it has chicken, grass and everything except vegetables in it.</p>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="prepCookBox">
+              <div class="innerLeftBox">
+                <label>Prep: 15mins</label>
+              </div>
+              <div class="innerRightBox">
+              <label>Cook: 15mins</label>
+            </div>
+            </div>
+            <div class="servingsLevelBox">
+              <div class="innerLeftBox">
+                <label>Servings: 6+</label>
+              </div>
+              <div class="innerRightBox">
+              <label>Level: Intermediate</label>
+            </div>
+            </div>
           </div>
         </div>
       </div>
