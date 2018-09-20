@@ -103,20 +103,175 @@
     <?php
     $ingredientsAmount = 10;
     for ($i = 0; $i < $ingredientsAmount; $i++) {
-        echo '<input type="number" name="ingredient-quantity[' . $i . ']" min="1" max="100" step="1" placeholder="Quantity">
-      <select name="ingredeint-unit[' . $i . ']">
-              <option value="Unit Not Selected" selected>SelectUnit</option>
-              <option value="pound(s)[' . $i . ']">pound(s)</option>
-              <option value="gram(s)[' . $i . ']" >gram(s)</option>
-              <option value="ounce(s)[' . $i . ']">ounce(s)</option>
-              <option value="pcs[' . $i . ']">pcs</option>
-              <option value="ml[' . $i . ']">ml</option>
-              <option value="tbl[' . $i . ']">tbl</option>
-              <option value="spoon[' . $i . ']">spoon</option>
-              <option value="teaspoon[' . $i . ']">teaspoon</option>
-              <option value="cup[' . $i . ']">cup</option>
+        echo '<input type="number" name="ingredientQuantity' . $i . '" min="1" max="100" step="1" placeholder="Quantity"';
+
+        switch ($i) {
+          case 0:
+          if (isset($_POST['ingredientQuantity0']))
+            echo 'value = "' . $_POST['ingredientQuantity0'] . '"';
+          break;
+          case 1:
+          if (isset($_POST['ingredientQuantity1']))
+            echo 'value = "' . $_POST['ingredientQuantity1'] . '"';
+          break;
+          case 2:
+          if (isset($_POST['ingredientQuantity2']))
+            echo 'value = "' . $_POST['ingredientQuantity2'] . '"';
+          break;
+          case 3:
+          if (isset($_POST['ingredientQuantity3']))
+            echo 'value = "' . $_POST['ingredientQuantity3'] . '"';
+          break;
+          case 4:
+          if (isset($_POST['ingredientQuantity4']))
+            echo 'value = "' . $_POST['ingredientQuantity4'] . '"';
+          break;
+          case 5:
+          if (isset($_POST['ingredientQuantity5']))
+            echo 'value = "' . $_POST['ingredientQuantity5'] . '"';
+          break;
+          case 6:
+          if (isset($_POST['ingredientQuantity6']))
+            echo 'value = "' . $_POST['ingredientQuantity6'] . '"';
+          break;
+          case 7:
+          if (isset($_POST['ingredientQuantity7']))
+            echo 'value = "' . $_POST['ingredientQuantity7'] . '"';
+          break;
+          case 8:
+          if (isset($_POST['ingredientQuantity8']))
+            echo 'value = "' . $_POST['ingredientQuantity8'] . '"';
+          break;
+          case 9:
+          if (isset($_POST['ingredientQuantity9']))
+            echo 'value = "' . $_POST['ingredientQuantity9'] . '"';
+          break;
+        }
+
+      echo '><select name="ingredientUnit' . $i . '">
+              <option value = "" ';
+
+              switch ($i) {
+                case 0:
+                  if (isset($_POST['ingredientUnit0']) && $_POST['ingredientUnit0'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 1:
+                  if (isset($_POST['ingredientUnit1']) && $_POST['ingredientUnit1'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 2:
+                  if (isset($_POST['ingredientUnit2']) && $_POST['ingredientUnit2'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 3:
+                  if (isset($_POST['ingredientUnit3']) && $_POST['ingredientUnit3'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 4:
+                  if (isset($_POST['ingredientUnit4']) && $_POST['ingredientUnit4'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 5:
+                  if (isset($_POST['ingredientUnit5']) && $_POST['ingredientUnit5'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 6:
+                  if (isset($_POST['ingredientUnit6']) && $_POST['ingredientUnit6'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 7:
+                  if (isset($_POST['ingredientUnit7']) && $_POST['ingredientUnit7'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 8:
+                  if (isset($_POST['ingredientUnit8']) && $_POST['ingredientUnit8'] == "") {
+                    echo "selected";
+                  }
+                break;
+                case 9:
+                  if (isset($_POST['ingredientUnit9']) && $_POST['ingredientUnit9'] == "") {
+                    echo "selected";
+                  }
+                break;
+            }
+
+
+      echo '>SelectUnit</option>
+              <option value="pound(s)" ';
+
+              switch ($i) {
+                case 0:
+                  if (isset($_POST['ingredientUnit0']) && $_POST['ingredientUnit0'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 1:
+                  if (isset($_POST['ingredientUnit1']) && $_POST['ingredientUnit1'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 2:
+                  if (isset($_POST['ingredientUnit2']) && $_POST['ingredientUnit2'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 3:
+                  if (isset($_POST['ingredientUnit3']) && $_POST['ingredientUnit3'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 4:
+                  if (isset($_POST['ingredientUnit4']) && $_POST['ingredientUnit4'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 5:
+                  if (isset($_POST['ingredientUnit5']) && $_POST['ingredientUnit5'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 6:
+                  if (isset($_POST['ingredientUnit6']) && $_POST['ingredientUnit6'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 7:
+                  if (isset($_POST['ingredientUnit7']) && $_POST['ingredientUnit7'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 8:
+                  if (isset($_POST['ingredientUnit8']) && $_POST['ingredientUnit8'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+                case 9:
+                  if (isset($_POST['ingredientUnit9']) && $_POST['ingredientUnit9'] == "pound(s)") {
+                    echo "selected";
+                  }
+                break;
+            }
+
+      echo '>pound(s)</option>
+              <option value="gram(s)" >gram(s)</option>
+              <option value="ounce(s)">ounce(s)</option>
+              <option value="pcs">pcs</option>
+              <option value="ml">ml</option>
+              <option value="tbl">tbl</option>
+              <option value="spoon">spoon</option>
+              <option value="teaspoon">teaspoon</option>
+              <option value="cup">cup</option>
           </select>
-      <input type="text" name="ingredient-name[' . $i . ']" placeholder="Ingredient..."/><br>
+      <input type="text" name="ingredientName' . $i . '" placeholder="Ingredient..."/><br>
       ';
     }
     ?>
