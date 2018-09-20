@@ -100,11 +100,6 @@
           <br>
 
 
-
-
-
-start of Trying
-
 <div class="ingredients">
   <?php
   $ingredientsAmount = 10;
@@ -118,16 +113,34 @@ start of Trying
             <option value="pound(s)" ';
         if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "pound(s)") { echo ' selected'; }
         echo '>pound(s)</option>
-            <option value="gram(s)">gram(s)</option>
-            <option value="ounce(s)">ounce(s)</option>
-            <option value="pcs">pcs</option>
-            <option value="ml">ml</option>
-            <option value="tbl">tbl</option>
-            <option value="spoon">spoon</option>
-            <option value="teaspoon">teaspoon</option>
-            <option value="cup">cup</option>
+            <option value="gram(s)" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "gram(s)") { echo ' selected'; }
+        echo '>gram(s)</option>
+            <option value="ounce(s) ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "ounce(s)") { echo ' selected'; }
+        echo '">ounce(s)</option>
+            <option value="pcs" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "pcs") { echo ' selected'; }
+        echo '>pcs</option>
+            <option value="ml" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "ml") { echo ' selected'; }
+        echo '>ml</option>
+            <option value="tbl" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "tbl") { echo ' selected'; }
+        echo '>tbl</option>
+            <option value="spoon" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "spoon") { echo ' selected'; }
+        echo '>spoon</option>
+            <option value="teaspoon" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "teaspoon") { echo ' selected'; }
+        echo '>teaspoon</option>
+            <option value="cup" ';
+            if (isset($_POST['ingredientUnit' . $i . '']) && $_POST['ingredientUnit' . $i . ''] == "cup") { echo ' selected'; }
+        echo '>cup</option>
         </select>
-    <input type="text" name="ingredientName' . $i . '" placeholder="Ingredient..."/><br>
+    <input type="text" name="ingredientName' . $i . '" placeholder="Ingredient..." ';
+      if (isset($_POST['ingredientName' . $i . ''])) { echo 'value = "' . $_POST['ingredientName' . $i . ''] . '"';}
+    echo '/><br>
     ';
   }
   ?>
