@@ -225,14 +225,14 @@
             }
         }
 
-
-
         //tags
         if (!empty($_POST["tags"])) {
                 $tags = $_POST["tags"];
                 echo "<input type=\"hidden\" name=\"tags\" value=\"$tags\">";
                 $tagsOK = true;
             }
+
+
 
 
 // echo '<input type="hidden" name="submit" value = "submit">';
@@ -246,6 +246,20 @@
 
       // echo '<input type="Submit" name="Submit" value = "submit">';
 echo "</form>";
+
+//All complete if all the fields are ok
+if ($recipeTitleOK && $relatedLinkOK && $categoryOK && $descriptionOK && $prepTimeValueOK && $prepTimeUnitOK && $cookTimeValueOK && $cookTimeUnitOK && $servingsOK && $difficultyOK) {
+  $allCompleteOK = true;
+}
+
+//If all complete, input into txt File and redirects to all-recipe page
+if ($allCompleteOK) {
+  //first save the information to the file and then
+  //redirect to the page you want to display
+  header('Location: all-recipes.php');
+  exit;
+}
+
     ?>
 
     <script type="text/javascript">

@@ -146,13 +146,6 @@
   ?>
 </div>
 
-
-
-
-
-
-
-
 <div class="title">
   <div class="titleBox">
     <h2>Tag Your Dish</h2>
@@ -162,7 +155,6 @@
 </div>
 
 <hr>
-<!-- <br> -->
 
 <div class="tags">
   <textarea rows="4" cols="50" name="tags"><?php if (isset($_POST['tags'])) { echo $_POST['tags']; } ?></textarea>
