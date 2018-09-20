@@ -201,201 +201,31 @@
         //         $ingredientName0OK = true;
         //     }
 
-
-        //Try Failed, Return to copying this block of code 10 times
-        //Fail by not being able to handle variable name   [   "$ingredientUnit" + $i + "OK"  ]
-
-        //Ten Times:
-
-        //0
-        if (!empty($_POST["ingredientQuantity0"])) {
-                $ingredientQuantity0 = $_POST["ingredientQuantity0"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity0\" value=\"$ingredientQuantity0\">";
-                $ingredientQuantity0OK = true;
+        //It was a success, I gave up and wrote 200 lines of code repeating this block,
+        //But later I researched a little bit more and it was a successfully
+        //Its mainly the problem of  ${"string" . $i} < If i knew I can use this, then it would be ok
+        $ingredientsAmount = 10;
+        for ($i = 0; $i < $ingredientsAmount; $i++) {
+        if (!empty($_POST["ingredientQuantity" . $i . ""])) {
+                ${"ingredientQuantity" . $i} = $_POST["ingredientQuantity" . $i . ""];
+                echo '<input type="hidden" name="ingredientQuantity' . $i . '" value="' . ${"ingredientQuantity" . $i} . '">';
+                ${'ingredientQuantity' . $i . 'OK'} = true;
             }
 
-        if (!empty($_POST["ingredientUnit0"])) {
-                $ingredientUnit0 = $_POST["ingredientUnit0"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit0\" value=\"$ingredientUnit0\">";
-                $ingredientUnit0OK = true;
+        if (!empty($_POST["ingredientUnit" . $i . ""])) {
+                ${"ingredientUnit" . $i} = $_POST["ingredientUnit" . $i . ""];
+                echo '<input type="hidden" name="ingredientUnit' . $i . '" value="' . ${"ingredientUnit" . $i} . '">';
+                ${'ingredientUnit' . $i . 'OK'} = true;
             }
 
-        if (!empty($_POST["ingredientName0"])) {
-                $ingredientName0 = $_POST["ingredientName0"];
-                echo "<input type=\"hidden\" name=\"ingredientName0\" value=\"$ingredientName0\">";
-                $ingredientName0OK = true;
+        if (!empty($_POST["ingredientName" . $i . ""])) {
+                ${"ingredientName" . $i} = $_POST["ingredientName" . $i . ""];
+                echo '<input type="hidden" name="ingredientName' . $i . '" value="' . ${"ingredientName" . $i} . '">';
+                ${'ingredientName' . $i . 'OK'} = true;
             }
+        }
 
-        //1
-        if (!empty($_POST["ingredientQuantity1"])) {
-                $ingredientQuantity1 = $_POST["ingredientQuantity1"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity1\" value=\"$ingredientQuantity1\">";
-                $ingredientQuantity1OK = true;
-            }
 
-        if (!empty($_POST["ingredientUnit1"])) {
-                $ingredientUnit1 = $_POST["ingredientUnit1"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit1\" value=\"$ingredientUnit1\">";
-                $ingredientUnit1OK = true;
-            }
-
-        if (!empty($_POST["ingredientName1"])) {
-                $ingredientName1 = $_POST["ingredientName1"];
-                echo "<input type=\"hidden\" name=\"ingredientName1\" value=\"$ingredientName1\">";
-                $ingredientName1OK = true;
-            }
-
-        //2
-        if (!empty($_POST["ingredientQuantity2"])) {
-                $ingredientQuantity2 = $_POST["ingredientQuantity2"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity2\" value=\"$ingredientQuantity2\">";
-                $ingredientQuantity2OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit2"])) {
-                $ingredientUnit2 = $_POST["ingredientUnit2"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit2\" value=\"$ingredientUnit2\">";
-                $ingredientUnit2OK = true;
-            }
-
-        if (!empty($_POST["ingredientName2"])) {
-                $ingredientName2 = $_POST["ingredientName2"];
-                echo "<input type=\"hidden\" name=\"ingredientName2\" value=\"$ingredientName2\">";
-                $ingredientName2OK = true;
-            }
-
-        //3
-        if (!empty($_POST["ingredientQuantity3"])) {
-                $ingredientQuantity3 = $_POST["ingredientQuantity3"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity3\" value=\"$ingredientQuantity3\">";
-                $ingredientQuantity3OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit3"])) {
-                $ingredientUnit3 = $_POST["ingredientUnit3"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit3\" value=\"$ingredientUnit3\">";
-                $ingredientUnit3OK = true;
-            }
-
-        if (!empty($_POST["ingredientName3"])) {
-                $ingredientName3 = $_POST["ingredientName3"];
-                echo "<input type=\"hidden\" name=\"ingredientName3\" value=\"$ingredientName3\">";
-                $ingredientName3OK = true;
-            }
-
-        //4
-        if (!empty($_POST["ingredientQuantity4"])) {
-                $ingredientQuantity4 = $_POST["ingredientQuantity4"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity4\" value=\"$ingredientQuantity4\">";
-                $ingredientQuantity4OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit4"])) {
-                $ingredientUnit4 = $_POST["ingredientUnit4"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit4\" value=\"$ingredientUnit4\">";
-                $ingredientUnit4OK = true;
-            }
-
-        if (!empty($_POST["ingredientName4"])) {
-                $ingredientName4 = $_POST["ingredientName4"];
-                echo "<input type=\"hidden\" name=\"ingredientName4\" value=\"$ingredientName4\">";
-                $ingredientName4OK = true;
-            }
-
-        //5
-        if (!empty($_POST["ingredientQuantity5"])) {
-                $ingredientQuantity5 = $_POST["ingredientQuantity5"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity5\" value=\"$ingredientQuantity5\">";
-                $ingredientQuantity5OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit5"])) {
-                $ingredientUnit5 = $_POST["ingredientUnit5"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit5\" value=\"$ingredientUnit5\">";
-                $ingredientUnit5OK = true;
-            }
-
-        if (!empty($_POST["ingredientName5"])) {
-                $ingredientName5 = $_POST["ingredientName5"];
-                echo "<input type=\"hidden\" name=\"ingredientName5\" value=\"$ingredientName5\">";
-                $ingredientName5OK = true;
-            }
-
-        //6
-        if (!empty($_POST["ingredientQuantity6"])) {
-                $ingredientQuantity6 = $_POST["ingredientQuantity6"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity6\" value=\"$ingredientQuantity6\">";
-                $ingredientQuantity6OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit6"])) {
-                $ingredientUnit6 = $_POST["ingredientUnit6"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit6\" value=\"$ingredientUnit6\">";
-                $ingredientUnit6OK = true;
-            }
-
-        if (!empty($_POST["ingredientName6"])) {
-                $ingredientName6 = $_POST["ingredientName6"];
-                echo "<input type=\"hidden\" name=\"ingredientName6\" value=\"$ingredientName6\">";
-                $ingredientName6OK = true;
-            }
-
-        //7
-        if (!empty($_POST["ingredientQuantity7"])) {
-                $ingredientQuantity7 = $_POST["ingredientQuantity7"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity7\" value=\"$ingredientQuantity7\">";
-                $ingredientQuantity7OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit7"])) {
-                $ingredientUnit7 = $_POST["ingredientUnit7"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit7\" value=\"$ingredientUnit7\">";
-                $ingredientUnit7OK = true;
-            }
-
-        if (!empty($_POST["ingredientName7"])) {
-                $ingredientName7 = $_POST["ingredientName7"];
-                echo "<input type=\"hidden\" name=\"ingredientName7\" value=\"$ingredientName7\">";
-                $ingredientName7OK = true;
-            }
-
-        //8
-        if (!empty($_POST["ingredientQuantity8"])) {
-                $ingredientQuantity8 = $_POST["ingredientQuantity8"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity8\" value=\"$ingredientQuantity8\">";
-                $ingredientQuantity8OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit8"])) {
-                $ingredientUnit8 = $_POST["ingredientUnit8"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit8\" value=\"$ingredientUnit8\">";
-                $ingredientUnit8OK = true;
-            }
-
-        if (!empty($_POST["ingredientName8"])) {
-                $ingredientName8 = $_POST["ingredientName8"];
-                echo "<input type=\"hidden\" name=\"ingredientName8\" value=\"$ingredientName8\">";
-                $ingredientName8OK = true;
-            }
-
-        //9
-        if (!empty($_POST["ingredientQuantity9"])) {
-                $ingredientQuantity9 = $_POST["ingredientQuantity9"];
-                echo "<input type=\"hidden\" name=\"ingredientQuantity9\" value=\"$ingredientQuantity9\">";
-                $ingredientQuantity9OK = true;
-            }
-
-        if (!empty($_POST["ingredientUnit9"])) {
-                $ingredientUnit9 = $_POST["ingredientUnit9"];
-                echo "<input type=\"hidden\" name=\"ingredientUnit9\" value=\"$ingredientUnit9\">";
-                $ingredientUnit9OK = true;
-            }
-
-        if (!empty($_POST["ingredientName9"])) {
-                $ingredientName9 = $_POST["ingredientName9"];
-                echo "<input type=\"hidden\" name=\"ingredientName9\" value=\"$ingredientName9\">";
-                $ingredientName9OK = true;
-            }
 
         //tags
         if (!empty($_POST["tags"])) {
