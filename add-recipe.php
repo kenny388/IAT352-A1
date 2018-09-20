@@ -45,7 +45,7 @@
 
             <div class="secondBox">
               <label>Short Description: </label><br>
-              <textarea name="description" rows="10" cols="45" <?php if(isset($_POST['descriptionOK'])) { print("style=\"background-color:Yellow;\"");}  ?>><?php if(isset($_POST["description"])) { $temp = $_POST["description"]; echo $temp;}?></textarea>
+              <textarea name="description" rows="10" cols="45" onkeypress="if(event.keyCode==13){return false;}"<?php if(isset($_POST['descriptionOK'])) { print("style=\"background-color:Yellow;\"");}  ?>><?php if(isset($_POST["description"])) { $temp = $_POST["description"]; echo $temp;}?></textarea>
             </div>
           </div>
 
@@ -148,6 +148,20 @@
 
 <div class="title">
   <div class="titleBox">
+    <h2>Preparation Instructions</h2>
+  </div>
+  <div class="titleBox">
+  </div>
+</div>
+
+<hr>
+
+<div class="preparation">
+  <textarea rows="8" cols="50" onkeypress="if(event.keyCode==13){return false;}" name="preparation"><?php if (isset($_POST['preparation'])) { echo $_POST['preparation']; } ?></textarea>
+</div>
+
+<div class="title">
+  <div class="titleBox">
     <h2>Tag Your Dish</h2>
   </div>
   <div class="titleBox">
@@ -157,7 +171,7 @@
 <hr>
 
 <div class="tags">
-  <textarea rows="4" cols="50" name="tags"><?php if (isset($_POST['tags'])) { echo $_POST['tags']; } ?></textarea>
+  <textarea rows="4" cols="50" name="tags" onkeypress="if(event.keyCode==13){return false;}"><?php if (isset($_POST['tags'])) { echo $_POST['tags']; } ?></textarea>
   <p class="smallCaption">Please separate your tags with ", "</p>
   <p class="smallCaption">Ex. Good Morning, 5mins, breakfast, easy to make</p><br>
 

@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>All Recipes</title>
+    <title>Recipe Details</title>
     <link rel="stylesheet" href="css/recipe-details.css">
     <!-- <script src="script.js"></script> -->
 

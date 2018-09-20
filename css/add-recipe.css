@@ -99,6 +99,10 @@ hr {
   margin-left: 2em;
 }
 
+.preparation {
+  margin-left: 2em;
+}
+
 input[type=text] {
   /* width: 100%; */
   padding: 3px 5px;

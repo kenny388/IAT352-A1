@@ -47,6 +47,8 @@
       $ingredientQuantity8 = "";
       $ingredientQuantity9 = "";
 
+      $preparation = "";
+
       $tags = "";
 
       //Booleans to see if value OK
@@ -78,6 +80,8 @@
       $ingredientQuantity7OK = false;
       $ingredientQuantity8OK = false;
       $ingredientQuantity9OK = false;
+
+      $preparationOK = false;
 
       $tagsOK = "";
 
@@ -225,6 +229,13 @@
             }
         }
 
+        //Preparations
+        if (!empty($_POST["preparation"])) {
+                $preparation = $_POST["preparation"];
+                echo "<input type=\"hidden\" name=\"preparation\" value=\"$preparation\">";
+                $preparationOK = true;
+            }
+
         //tags
         if (!empty($_POST["tags"])) {
                 $tags = $_POST["tags"];
@@ -265,6 +276,7 @@ if ($allCompleteOK) {
    $ingredientQuantity7 . ",_" .  $ingredientUnit7 . ",_" . $ingredientName7 . ",_" .
    $ingredientQuantity8 . ",_" .  $ingredientUnit8 . ",_" . $ingredientName8 . ",_" .
    $ingredientQuantity9 . ",_" .  $ingredientUnit9 . ",_" . $ingredientName9 . ",_" .
+   $preparation . ",_" .
    $tags.
     "\n";
   $file = 'recipes/kenny_cheung_recipes.txt';
