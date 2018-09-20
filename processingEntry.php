@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Processing Entries</title>
     <link rel="stylesheet" href="css/processingEntry.css">
   </head>
   <body>
@@ -233,8 +233,6 @@
             }
 
 
-
-
 // echo '<input type="hidden" name="submit" value = "submit">';
 
       }
@@ -255,6 +253,23 @@ if ($recipeTitleOK && $relatedLinkOK && $categoryOK && $descriptionOK && $prepTi
 //If all complete, input into txt File and redirects to all-recipe page
 if ($allCompleteOK) {
   //first save the information to the file and then
+  $temp = $recipeTitle . ", " . $relatedLink . ", " . $category . ", " . $description . ", " . $prepTimeValue . ", " . $prepTimeUnit . ", " . $cookTimeValue . ", " . $cookTimeUnit
+   . ", " . $servings . ", " . $difficulty . ", " .
+   $ingredientQuantity0 . ", " .  $ingredientUnit0 . ", " . $ingredientName0 . ", " .
+   $ingredientQuantity1 . ", " .  $ingredientUnit1 . ", " . $ingredientName1 . ", " .
+   $ingredientQuantity2 . ", " .  $ingredientUnit2 . ", " . $ingredientName2 . ", " .
+   $ingredientQuantity3 . ", " .  $ingredientUnit3 . ", " . $ingredientName3 . ", " .
+   $ingredientQuantity4 . ", " .  $ingredientUnit4 . ", " . $ingredientName4 . ", " .
+   $ingredientQuantity5 . ", " .  $ingredientUnit5 . ", " . $ingredientName5 . ", " .
+   $ingredientQuantity6 . ", " .  $ingredientUnit6 . ", " . $ingredientName6 . ", " .
+   $ingredientQuantity7 . ", " .  $ingredientUnit7 . ", " . $ingredientName7 . ", " .
+   $ingredientQuantity8 . ", " .  $ingredientUnit8 . ", " . $ingredientName8 . ", " .
+   $ingredientQuantity9 . ", " .  $ingredientUnit9 . ", " . $ingredientName9 . ", " .
+   $tags.
+    "\n";
+  $file = 'kenny_cheung_recipes.txt';
+file_put_contents($file, $temp, FILE_APPEND);
+
   //redirect to the page you want to display
   header('Location: all-recipes.php');
   exit;
