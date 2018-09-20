@@ -31,7 +31,8 @@
             echo '<div class="recipe">';
               echo '<div class="leftBox">';
                 echo '<div class="titleBox">';
-                  echo '<h3>' . $datas[0] . '</h3>';
+
+                  echo '<a href="recipe-details.php?keyNum='; echo $keyNum; echo'"><h3>' . $datas[0] . '</h3></a>';
                 echo '</div>';
                 echo '<div class="descriptionBox">';
                   echo '<p>' . $datas[3] . '</p>';
