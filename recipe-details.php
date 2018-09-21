@@ -16,7 +16,7 @@
     <!-- page content -->
     <div class="holder">
       <div class="title">
-          <h2>All Recipes</h2>
+          <h2>Recipe Details</h2>
       </div>
 
       <hr>
@@ -63,35 +63,69 @@
         }
         ?>
 
-        <!-- //original Recipe Template:
-        <div class="recipe">
-          <div class="leftBox">
-            <div class="titleBox">
-              <h3>NO NAME PIEEEEEE</h3>
-            </div>
-            <div class="descriptionBox">
-              <p>This is just sample text, Here is a pie, it has chicken, grass and everything except vegetables in it.</p>
+        //original Recipe Template:
+
+              <?php
+              $file_lines = file('recipes/kenny_cheung_recipes.txt');
+              $keyNum = -1;
+                foreach ($file_lines as $line) {
+                  $keyNum++;
+                  $datas = explode(",_", $line);
+                    if ($keyNum == $_GET['keyNum']) {
+
+                      // echo '<div class="recipe">';
+                      //   echo '<div class="recipeNameBox">';
+                      //     echo '<div class="leftBox">';
+                      //       echo '<h4>Description :</h4>';
+                      //         echo '<p>'. $datas[3] .'</p>';
+                      //     echo '</div>';
+                      //   echo '</div>';
+                    }
+                  }
+                  ?>
+
+
+                  <div class="recipe">
+                    <div class="title">
+                        <h2>Recipe Details</h2>
+                    </div>
+                    <div class="oneRow">
+                      <div class="leftBox">
+                        <h4>Description :</h4><p>Lorem ipsum dolor sit amet, vel id choro expetendis interpretaris. An est iusto adipisci inciderint. Duo facilis epicuri ut, erroribus definiebas disputando an his. Pri discere labores cu, sit insolens oportere ex, idque oratio noster est eu. Ea est solum doming melius, et ius conceptam voluptaria. Ad cum tempor oblique fabulas, eu erant dictas repudiandae mea.</p>
+                      </div>
+            <div class="rightBox">
+              <div class="verticalList">
+                <div class="eachVerticalBox">
+                  <p>Prep : 15mins</p>
+                </div>
+                <div class="eachVerticalBox">
+                  <p>Cook : 15mins</p>
+                </div>
+                <div class="eachVerticalBox">
+                  <p>Level : Intermediate</p>
+                </div>
+                <div class="eachVerticalBox">
+                  <p>Serves : 6+</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="rightBox">
-            <div class="prepCookBox">
+
+
+
+            <div class="fiftyfiftyBox">
               <div class="innerLeftBox">
-                <label>Prep: 15mins</label>
+                <label>Ingredients</label>
+                  <p>1 pcs egg</p>
+                  <p>4 spoon salt</p>
               </div>
               <div class="innerRightBox">
-              <label>Cook: 15mins</label>
+                <label>Preparation</label>
+                  <p>Lorem ipsum dolor sit amet, vel id choro expetendis interpretaris. An est iusto adipisci inciderint. Duo facilis epicuri ut, erroribus definiebas disputando an his. Pri discere labores cu, sit insolens oportere ex</p>
             </div>
             </div>
-            <div class="servingsLevelBox">
-              <div class="innerLeftBox">
-                <label>Servings: 6+</label>
-              </div>
-              <div class="innerRightBox">
-              <label>Level: Intermediate</label>
-            </div>
-            </div>
-          </div>
-        </div> -->
+
+        </div>
 
       </div>
 
