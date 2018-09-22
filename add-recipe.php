@@ -104,7 +104,7 @@
   <?php
   $ingredientsAmount = 10;
   for ($i = 0; $i < $ingredientsAmount; $i++) {
-      echo '<input type="number" name="ingredientQuantity' . $i . '" min="1" max="100" step="1" ';
+      echo '<input type="number" name="ingredientQuantity' . $i . '" min="0" max="10000" step="0.1" ';
         if (isset($_POST['ingredientQuantity' . $i . ''])) { echo 'value = "' . $_POST['ingredientQuantity' . $i . ''] . '"';}
       echo ' placeholder="Quantity"><select name="ingredientUnit' . $i . '">
             <option value = "" ';
