@@ -36,8 +36,12 @@
                         echo '</div>';
                         echo '<div class="oneRow">';
                           echo '<div class="leftBox">';
-                            echo '<h4>Description :</h4><p>'. $datas[3] .'</p>';
-                            echo '</br>';
+                          echo '<h4>Description :</h4><p>'. $datas[3] .'</p>';
+                          echo '<div class="halfLine"></div>';
+                          // echo '</br>';
+                          echo '<h4>Category :</h4><p>'. $datas[2] .'</p>';
+                          echo '<div class="halfLine"></div>';
+                          // echo '</br>';
                             echo '<div class="flexRow">';
                             echo '<label>Tags : 	&nbsp;	&nbsp;</label>';
                             $tags = explode(",", $datas[41]);
@@ -84,6 +88,9 @@
                           echo '<div class="innerRightBox">';
                             echo '<h4>Preparation :</h4>';
                               echo '<p>'. $datas[40] .'</p>';
+                              echo '</br>';
+                              echo '<h4>Related Link :</h4>';
+                                echo '<p>'. $datas[1] .'</p>';
                           echo '</div>';
                         echo '</div>';
                       echo '</div>';
