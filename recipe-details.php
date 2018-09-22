@@ -38,7 +38,6 @@
                           echo '<div class="leftBox">';
                             echo '<h4>Description :</h4><p>'. $datas[3] .'</p>';
                             echo '</br>';
-
                             echo '<div class="flexRow">';
                             echo '<label>Tags : 	&nbsp;	&nbsp;</label>';
                             $tags = explode(",", $datas[41]);
@@ -88,12 +87,11 @@
                           echo '</div>';
                         echo '</div>';
                       echo '</div>';
-
-
                     }
                 }
                   ?>
 
+                  <a href="all-recipes.php"><div class="button">All Recipes</div></a>
 
       <!-- //original Recipe Template:
 

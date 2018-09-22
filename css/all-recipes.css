@@ -23,7 +23,8 @@ div {
   width: 60%;
   margin-left: 20%;
   margin-top: 3em;
-  height: 38em;
+  /* height: 38em; */
+  padding-bottom: 2em;
   /* text-align: center; */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -38,6 +39,16 @@ div {
   /* width: 40%; */
   /* margin-left: 30%; */
   /* margin-right: 30%; */
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  background-color: rgba(244, 236, 188, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 10em;
 }
 
 p {

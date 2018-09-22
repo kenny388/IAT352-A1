@@ -60,6 +60,8 @@
         }
         ?>
 
+        <a href="add-recipe.php"><div class="button">Add New Recipe</div></a>
+
         <!-- //original Recipe Template:
         <div class="recipe">
           <div class="leftBox">

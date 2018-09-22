@@ -178,6 +178,8 @@
 </div>
 
 <input type="submit" name="submit" value="Submit">
+
+<div class="button"><a href="all-recipes.php">All Recipes</a></div>
       </div>
     </div>
 

@@ -42,6 +42,16 @@ body {
   margin-right: 30%;
 }
 
+.button {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  background-color: rgba(244, 236, 188, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 10em;
+}
+
 .validatingText {}
 
 p {
