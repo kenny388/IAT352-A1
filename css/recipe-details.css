@@ -55,6 +55,23 @@ h4 {
   font-size: 0.8em;
 }
 
+.smallerText {
+  font-size: 0.8em;
+  color: rgba(100, 100, 100, 1);
+}
+
+.eachTag {
+  display: inline-block;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 0.4em;
+  background-color: rgba(244, 236, 188, 0.8);
+  border-radius: 20px;
+  font-size: 0.8em;
+}
+
 .title {
   display: flex;
   flex-direction: row;
