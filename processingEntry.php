@@ -8,9 +8,13 @@
     <meta charset="utf-8">
     <title>Processing Entries</title>
     <link rel="stylesheet" href="css/processingEntry.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
   </head>
   <body>
     <!-- page content -->
+    <?php
+    include 'header.php';
+    ?>
     <div class="holder">
       <h2 class="validatingText">Validating Entries...</h2>
       <hr>
@@ -287,6 +291,10 @@ file_put_contents($file, $temp, FILE_APPEND);
   exit;
 }
 
+    ?>
+
+    <?php
+    include 'footer.php';
     ?>
 
     <script type="text/javascript">
