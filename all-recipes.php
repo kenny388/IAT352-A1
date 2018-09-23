@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>All Recipes</title>
     <link rel="stylesheet" href="css/all-recipes.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
     <!-- <script src="script.js"></script> -->
 
 
@@ -15,33 +16,32 @@
   <body>
     <!-- page content -->
 
-    <div class="header">
+    <!-- <div class="header">
       <div class="row">
         <button class="navButton">
         </button>
         <button class="navButton">
         </button>
         <button class="navButton">
-          <a href="#" class="aTagButton" id="titleFontSize">eni.</a>
+          <a href="all-recipes.php" class="aTagButton" id="titleFontSize">cipe</a>
         </button>
         <button class="fillerDiv"></button>
 
         <button class="navButton">
-          <a href="#" class="aTagButton">All Recipes</a>
+          <a href="all-recipes.php" class="aTagButton">All Recipes</a>
         </button>
         <button class="navButton">
-          <a href="#" class="aTagButton">Add a Recipe</a>
-        </button>
-        <button class="navButton">
+          <a href="add-recipe.php" class="aTagButton">Add a Recipe</a>
         </button>
         <button class="navButton">
         </button>
-        <!-- <a href=""><div class="navButton">
-          <h4></h4>
-        </div></a> -->
+        <button class="navButton">
+        </button>
       </div>
-    </div>
-
+    </div> -->
+    <?php
+    include 'header.php';
+    ?>
 
     <div class="holder">
       <div class="title">
@@ -124,6 +124,9 @@
       </div>
 
     </div>
+    <?php
+    include 'footer.php';
+    ?>
 
   </body>
 </html>

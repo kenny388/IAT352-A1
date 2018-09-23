@@ -8,11 +8,15 @@
     <meta charset="utf-8">
     <title>Add Recipe</title>
     <link rel="stylesheet" href="css/add-recipe.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
     <!-- <script src="script.js"></script> -->
 
 
   </head>
   <body>
+    <?php
+    include 'header.php';
+    ?>
     <!-- page content -->
     <div class="holder">
       <div class="title">
@@ -182,6 +186,8 @@
 <div class="button"><a href="all-recipes.php">All Recipes</a></div>
       </div>
     </div>
-
+    <?php
+    include 'footer.php';
+    ?>
   </body>
 </html>
