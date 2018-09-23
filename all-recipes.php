@@ -29,6 +29,11 @@
       <div class="container">
         <?php
         $file_lines = file('recipes/kenny_cheung_recipes.txt');
+
+        //Exception Handling if
+        if (sizeof($file_lines) <= 0) {
+          echo '<p>No recipes available.</p>';
+      }
           foreach ($file_lines as $line) {
             $datas = explode(",_", $line);
             echo '<div class="recipe">';

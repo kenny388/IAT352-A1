@@ -272,6 +272,10 @@ if ($allCompleteOK) {
   //Provide an incremental number identifier for each data
     $file_lines = file('recipes/kenny_cheung_recipes.txt');
     $arraySize = sizeof($file_lines);
+  //If first time filing in incremental number identifier, give 0
+    if ($file_lines == "") {
+      $arraySize = 0;
+    }
 
   //first save the information to the file and then
   @$temp = $recipeTitle . ",_" . $relatedLink . ",_" . $category . ",_" . $description . ",_" . $prepTimeValue . ",_" . $prepTimeUnit . ",_" . $cookTimeValue . ",_" . $cookTimeUnit
@@ -288,8 +292,13 @@ if ($allCompleteOK) {
    $ingredientQuantity9 . ",_" .  $ingredientUnit9 . ",_" . $ingredientName9 . ",_" .
    $preparation . ",_" .
    $tags. ",_" .
-   $arraySize.
-    "\n";
+   $arraySize;
+
+
+    //Force all line changed into 1 lines, and then giving a final ending \n tag for changing lines
+    $temp = str_replace(array("\n", "\r"), '', $temp);
+    $temp = $temp . "\n";
+
   $file = 'recipes/kenny_cheung_recipes.txt';
 file_put_contents($file, $temp, FILE_APPEND);
 
@@ -301,6 +310,7 @@ file_put_contents($file, $temp, FILE_APPEND);
 
     ?>
 
+    <!-- Auto Form Submission if some data do not satisfy the requirements -->
     <script type="text/javascript">
         document.getElementById('formAuto').submit(); // SUBMIT FORM
     </script>
