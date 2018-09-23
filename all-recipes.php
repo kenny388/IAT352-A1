@@ -3,6 +3,8 @@
 <!-- Reference: -->
 <!-- Background Image Used: Kitchen Background Blured retrieved from http://brianjackman.co.uk/ -->
 
+<!-- My git repository: https://github.com/kenny388/IAT352-A1 -->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -120,6 +122,7 @@
       </div>
 
     </div>
+    <!-- Included footer with php -->
     <?php
     include 'footer.php';
     ?>
