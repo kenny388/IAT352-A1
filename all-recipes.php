@@ -14,6 +14,35 @@
   </head>
   <body>
     <!-- page content -->
+
+    <div class="header">
+      <div class="row">
+        <button class="navButton">
+        </button>
+        <button class="navButton">
+        </button>
+        <button class="navButton">
+          <a href="#" class="aTagButton" id="titleFontSize">eni.</a>
+        </button>
+        <button class="fillerDiv"></button>
+
+        <button class="navButton">
+          <a href="#" class="aTagButton">All Recipes</a>
+        </button>
+        <button class="navButton">
+          <a href="#" class="aTagButton">Add a Recipe</a>
+        </button>
+        <button class="navButton">
+        </button>
+        <button class="navButton">
+        </button>
+        <!-- <a href=""><div class="navButton">
+          <h4></h4>
+        </div></a> -->
+      </div>
+    </div>
+
+
     <div class="holder">
       <div class="title">
           <h2>All Recipes</h2>
