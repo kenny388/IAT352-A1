@@ -11,33 +11,27 @@
     <title>Recipe Details</title>
     <link rel="stylesheet" href="css/recipe-details.css">
     <link rel="stylesheet" href="css/headerFooter.css">
-    <!-- <script src="script.js"></script> -->
-
 
   </head>
   <body>
 
     <!-- page content -->
+    <!-- Include header with php -->
     <?php
     include 'header.php';
     ?>
     <div class="holder">
-      <div class="title">
-          <!-- <h2>Recipe Details</h2> -->
-      </div>
-
-      <!-- <hr> -->
-
       <div class="container">
         <?php
               $file_lines = file('recipes/kenny_cheung_recipes.txt');
-              //Exception Handling if
+              //Exception Handling if the id provided does not exist
               if ($_GET['keyNum'] > sizeof($file_lines) - 1 || $_GET['keyNum'] < 0 ) {
                 echo '<p>There is no recipe associated with submitted ID</p>';
             }
-            //Looping through each lines
+            //Looping through each lines(recipes)
                 foreach ($file_lines as $line) {
                     $datas = explode(",_", $line);
+                    // Condition to only show the correct recipe associated with the identifier at 41st field
                     if (trim($datas[42]) == $_GET['keyNum']) {
 
                       echo '<div class="recipe">';
@@ -48,12 +42,11 @@
                           echo '<div class="leftBox">';
                           echo '<h4>Description :</h4><p>'. $datas[3] .'</p>';
                           echo '<div class="halfLine"></div>';
-                          // echo '</br>';
                           echo '<h4>Category :</h4><p>'. $datas[2] .'</p>';
                           echo '<div class="halfLine"></div>';
-                          // echo '</br>';
                             echo '<div class="flexRow">';
                             echo '<label>Tags : 	&nbsp;	&nbsp;</label>';
+                            // Tags are exploded further with "," symbol into multiple tags, each with its own little div
                             $tags = explode(",", $datas[41]);
                             for ($i = 0; $i < sizeof($tags); $i++) {
                               echo '<div class="eachTag">' . $tags[$i] . '</div>';
@@ -80,8 +73,7 @@
                         echo '<div class="fiftyfiftyBox">';
                           echo '<div class="innerLeftBox">';
                             echo '<h4>Ingredients :</h4>';
-                              // echo '<p>1 pcs egg</p>';
-                              // echo '<p>4 spoon salt</p>';
+                              // Here are the ingredients, 10 lines
                               echo '<p>'. $datas[10] . ' ' . $datas[11] . ' ' . $datas[12] .'</p>';
                               echo '<p>'. $datas[13] . ' ' . $datas[14] . ' ' . $datas[15] .'</p>';
                               echo '<p>'. $datas[16] . ' ' . $datas[17] . ' ' . $datas[18] .'</p>';
@@ -92,8 +84,6 @@
                               echo '<p>'. $datas[31] . ' ' . $datas[32] . ' ' . $datas[33] .'</p>';
                               echo '<p>'. $datas[34] . ' ' . $datas[35] . ' ' . $datas[36] .'</p>';
                               echo '<p>'. $datas[37] . ' ' . $datas[38] . ' ' . $datas[39] .'</p>';
-
-
                           echo '</div>';
                           echo '<div class="innerRightBox">';
                             echo '<h4>Preparation :</h4>';
@@ -107,7 +97,7 @@
                     }
                 }
                   ?>
-
+                  <!-- A button to go back to the all-recipes page -->
                   <a href="all-recipes.php"><div class="button">All Recipes</div></a>
 
       <!-- //original Recipe Template:
@@ -153,6 +143,7 @@
       </div>
 
     </div>
+    <!-- Included footer with php -->
     <?php
     include 'footer.php';
     ?>
