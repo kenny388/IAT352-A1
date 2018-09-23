@@ -29,15 +29,12 @@
       <div class="container">
         <?php
         $file_lines = file('recipes/kenny_cheung_recipes.txt');
-        $keyNum = -1;
           foreach ($file_lines as $line) {
-            $keyNum++;
             $datas = explode(",_", $line);
             echo '<div class="recipe">';
               echo '<div class="leftBox">';
                 echo '<div class="titleBox">';
-
-                  echo '<a href="recipe-details.php?keyNum='; echo $keyNum; echo'"><h3>' . $datas[0] . '</h3></a>';
+                  echo '<a href="recipe-details.php?keyNum='; echo $datas[42]; echo'"><h3>' . $datas[0] . '</h3></a>';
                 echo '</div>';
                 echo '<div class="descriptionBox">';
                   echo '<p>' . $datas[3] . '</p>';

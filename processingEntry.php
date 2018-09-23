@@ -23,6 +23,9 @@
 
 
     <?php
+    //include footer
+    include 'footer.php';
+
     //Fields
       $recipeTitle = "";
       $relatedLink = "";
@@ -233,7 +236,6 @@
             }
         }
 
-        //Preparations
         if (!empty($_POST["preparation"])) {
                 $preparation = $_POST["preparation"];
                 echo "<input type=\"hidden\" name=\"preparation\" value=\"$preparation\">";
@@ -267,6 +269,10 @@ if ($recipeTitleOK && $relatedLinkOK && $categoryOK && $descriptionOK && $prepTi
 
 //If all complete, input into txt File and redirects to all-recipe page
 if ($allCompleteOK) {
+  //Provide an incremental number identifier for each data
+    $file_lines = file('recipes/kenny_cheung_recipes.txt');
+    $arraySize = sizeof($file_lines);
+
   //first save the information to the file and then
   @$temp = $recipeTitle . ",_" . $relatedLink . ",_" . $category . ",_" . $description . ",_" . $prepTimeValue . ",_" . $prepTimeUnit . ",_" . $cookTimeValue . ",_" . $cookTimeUnit
    . ",_" . $servings . ",_" . $difficulty . ",_" .
@@ -281,7 +287,8 @@ if ($allCompleteOK) {
    $ingredientQuantity8 . ",_" .  $ingredientUnit8 . ",_" . $ingredientName8 . ",_" .
    $ingredientQuantity9 . ",_" .  $ingredientUnit9 . ",_" . $ingredientName9 . ",_" .
    $preparation . ",_" .
-   $tags.
+   $tags. ",_" .
+   $arraySize.
     "\n";
   $file = 'recipes/kenny_cheung_recipes.txt';
 file_put_contents($file, $temp, FILE_APPEND);
@@ -291,10 +298,7 @@ file_put_contents($file, $temp, FILE_APPEND);
   exit;
 }
 
-    ?>
 
-    <?php
-    include 'footer.php';
     ?>
 
     <script type="text/javascript">

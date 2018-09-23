@@ -29,17 +29,14 @@
       <div class="container">
         <?php
               $file_lines = file('recipes/kenny_cheung_recipes.txt');
-              $keyNum = -1;
               //Exception Handling if
               if ($_GET['keyNum'] > sizeof($file_lines) - 1 || $_GET['keyNum'] < 0 ) {
                 echo '<p>There is no recipe associated with submitted ID</p>';
             }
             //Looping through each lines
                 foreach ($file_lines as $line) {
-                    $keyNum++;
                     $datas = explode(",_", $line);
-
-                    if ($keyNum == $_GET['keyNum']) {
+                    if (trim($datas[42]) == $_GET['keyNum']) {
 
                       echo '<div class="recipe">';
                         echo '<div class="title">';

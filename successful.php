@@ -28,13 +28,6 @@
         echo '';
 
       ?>">Link</a>
-      <?php
-        $file_lines = file('recipes/kenny_cheung_recipes.txt');
-        $arraySize = sizeof($file_lines);
-
-        echo 'recipe-details.php?keyNum="' . $arraySize . '"';
-
-      ?>
     </div>
 
     <?php
